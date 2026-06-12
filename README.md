@@ -1,58 +1,153 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# TaskFlow API
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A RESTful API built with Laravel 13 and MySQL for managing projects and tasks.
 
-## About Laravel
+## Highlights
+✓ Token Authentication
+✓ Project & Task Management
+✓ Search & Filtering
+✓ Dashboard Statistics
+✓ Automated Tests
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Features
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### Authentication
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+* User Registration
+* User Login
+* User Logout
+* Token Authentication with Laravel Sanctum
 
-## Learning Laravel
+### Project Management
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+* Create Project
+* View Projects
+* Update Project
+* Delete Project
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Task Management
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+* Create Task
+* View Tasks
+* Update Task
+* Delete Task
+* Search Tasks
+* Filter Tasks by Status
+* Filter Tasks by Priority
+* Sort Tasks
+* Pagination
 
-## Agentic Development
+### Dashboard
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+* Total Projects
+* Total Tasks
+* Pending Tasks
+* Completed Tasks
+
+### Security
+
+* Laravel Sanctum Authentication
+* Authorization Policies
+* Request Validation
+* Protected API Routes
+
+### Testing
+
+* Authentication Tests
+* Authorization Tests
+* Task Search Tests
+
+## Tech Stack
+
+* Laravel 13
+* PHP 8.3
+* MySQL
+* Laravel Sanctum
+* PHPUnit
+* Postman
+
+## Installation
 
 ```bash
-composer require laravel/boost --dev
+git clone <repository-url>
 
-php artisan boost:install
+cd taskflow-api
+
+composer install
+
+cp .env.example .env
+
+php artisan key:generate
+
+php artisan migrate
+
+php artisan serve
 ```
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
+## Run Tests
 
-## Contributing
+```bash
+php artisan test
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## API Endpoints
 
-## Code of Conduct
+### Authentication
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+POST /api/register
 
-## Security Vulnerabilities
+POST /api/login
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+POST /api/logout
 
-## License
+GET /api/me
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### Projects
+
+GET /api/projects
+
+POST /api/projects
+
+GET /api/projects/{id}
+
+PUT /api/projects/{id}
+
+DELETE /api/projects/{id}
+
+### Tasks
+
+GET /api/tasks
+
+POST /api/tasks
+
+GET /api/tasks/{id}
+
+PUT /api/tasks/{id}
+
+DELETE /api/tasks/{id}
+
+### Dashboard
+
+GET /api/dashboard
+
+## Screenshots
+
+### Authentication
+
+![Login](docs/screenshots/login-success.png)
+
+### Projects
+
+![Projects](docs/screenshots/projects-list.png)
+
+### Task Search
+
+![Task Search](docs/screenshots/task-search.png)
+
+### Dashboard
+
+![Dashboard](docs/screenshots/user-dashboard.png)
+
+### Automated Tests
+
+![Tests](docs/screenshots/tests-passed.png)
