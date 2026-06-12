@@ -3,11 +3,11 @@
 A RESTful API built with Laravel 13 and MySQL for managing projects and tasks.
 
 ## Highlights
-✓ Token Authentication
-✓ Project & Task Management
-✓ Search & Filtering
-✓ Dashboard Statistics
-✓ Automated Tests
+* Token Authentication
+* Project & Task Management
+* Search & Filtering
+* Dashboard Statistics
+* Automated Tests
 
 ## Features
 
